@@ -1,0 +1,12 @@
+'''
+Amazon logo, search by xpath, "//i[@class='a-icon a-icon-logo']"
+Email field, search by ID, “ap_email”
+Continue button, search by ID, “continue” or search by xpath, "//input[@id='continue' and @type='submit']"
+Need help link, search by xpath, "//span[@class='a-expander-prompt']"
+Forgot your password link, search by ID, “auth-fpp-link-bottom"
+Other issues with Sign-In link -- (Currently not display)
+Create your Amazon account button, search by xpath, "//a[@id='createAccountSubmit']"
+*Conditions of use link, search by xpath,"//a[text()='Conditions of Use']"
+*Privacy Notice link, search by xpath,"//a[contains(text(),'Privacy')]"
+
+'''
