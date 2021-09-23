@@ -5,15 +5,17 @@ from selenium.webdriver.common.keys import Keys
 
 # init Search
 keyword = 'Cancel orders'
-expectText = 'Cancel Items or Orders'
-targetURL = 'https://www.amazon.com/gp/help/customer/display.html'
+expect_text = 'Cancel Items or Orders'
+target_url = 'https://www.amazon.com/gp/help/customer/display.html'
 
 # init driver
-driver = webdriver.Chrome()
+#driver = webdriver.Chrome(executable_path='/Users/tonimaxx/careerist/python-selenium-automation/chromedriver')
+driver = webdriver.Chrome(executable_path='./chromedriver')
+
 driver.maximize_window()
 
 # open the url
-driver.get(targetURL)
+driver.get(target_url)
 
 search = driver.find_element(By.ID, 'helpsearch')
 search.clear()
@@ -23,13 +25,14 @@ search.send_keys(Keys.RETURN)
 # wait for 4 sec
 sleep(4)
 
-# at TargetURL
-targetXpath = "//h1[contains(text(), '"+expectText+"')]"
-search = driver.find_elements_by_xpath(targetXpath)
+# at target_url
+target_xpath = "//h1[contains(text(), '"+expect_text+"')]"
+search = driver.find_elements_by_xpath(target_xpath)
 
 # verify if we can find a result in list (list is not empty)
-isFound = False if len(search) < 1 else True
+is_found = False if len(search) < 1 else True
 
-print('Test Passed' if isFound else expectText+' not found')
+assert is_found, f"Expected text '{expect_text}' not found"
+print('Test Passed')
 
 driver.quit()
