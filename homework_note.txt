@@ -1,4 +1,4 @@
-Homework#3
+Homework#3 - Sep 25, 2021
 
 0. Repeat everything
     (done)
@@ -12,3 +12,7 @@ Homework#3
     > amazon_add_product.feature
 5. Codewars https://www.codewars.com/kata/57eadb7ecd143f4c9c0000a3
     (done)
+
+Homework#2
+
+Homework#1
