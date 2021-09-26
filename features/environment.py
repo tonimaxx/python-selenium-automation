@@ -1,11 +1,22 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
 
 def browser_init(context):
     """
     :param context: Behave context
     """
-    context.driver = webdriver.Chrome()
+    context.driver = webdriver.Chrome(executable_path = './chromedriver')
+
+    """
+    ##-- Edited for Chrome Profile
+    options = Options()
+
+    options.add_argument("user-data-dir=/Users/tonimaxx/Library/Application Support/Google/Chrome/Profile 31")
+    context.driver = webdriver.Chrome(executable_path = './chromedriver', chrome_options=options)
+    ##-- End Chrome Profile
+    """
+
     # context.browser = webdriver.Safari()
     # context.browser = webdriver.Firefox()
 

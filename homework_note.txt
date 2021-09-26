@@ -1,0 +1,14 @@
+Homework#3
+
+0. Repeat everything
+    (done)
+1. Find the most optimal locators
+    > homework#3-practice-locator.txt
+2. Update a test case for support search using BDD
+    > amazon_help_search.feature
+3. Create a test case using BDD that opens amazon.com, clicks on the cart icon and verifies that Your Amazon Cart is empty.
+    > amazon_cart_is_empty.feature
+4. Test case to add any product you want into the cart, and make sure it’s there
+    > amazon_add_product.feature
+5. Codewars https://www.codewars.com/kata/57eadb7ecd143f4c9c0000a3
+    (done)

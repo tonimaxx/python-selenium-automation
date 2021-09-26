@@ -1,0 +1,15 @@
+'''
+Note : Sep 24, 9pm - Amazon has updated some text (Eg. Email > Mobile number or email)
+
+Amazon logo, search by css_selector, "i.a-icon.a-icon-logo"
+Create account, search by css_selector, "h1.a-spacing-small"
+Your name field, search by css_selector, "input#ap_customer_name"
+Mobile number or email field, search by css_selector, "input#ap_email"
+Password field, search by css_selector, "input#ap_password"
+Password must be..., search by xpath, "//div[contains(text(),'Passwords must be at least 6 characters.')]"
+Re-enter password field, search by css_selector, "input#ap_password_check"
+Continue button, search by css_selector, "input#continue"
+Conditions of Use link, search by xpath, "//div[@id='legalTextRow']//a[contains(text(),'Conditions of Use')]"
+Privacy Notice. link, search by xpath, "//div[@id='legalTextRow']//a[contains(text(),'Privacy Notice')]"
+
+'''
