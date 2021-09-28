@@ -1,3 +1,18 @@
+Homework#4 - Sep 28, 2021
+
+0. Repeat everything
+    (done + will repeat again)
+1. Create a test case that will open amazon BestSellers page:
+    > amazon_bestsellers.feature
+2. Create a test case to add any product you want into the cart, and make sure it’s there
+    > amazon_add_product.feature
+3. Create a test case to verify Customer Service’s page UI elements are present:
+    > amazon_customer_service.feature
+4. Codewar
+    > codewar_homework4.py
+
+----------
+
 Homework#3 - Sep 25, 2021
 
 0. Repeat everything
