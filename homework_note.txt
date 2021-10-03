@@ -1,3 +1,13 @@
+Homework#6 - Oct 3, 2021
+
+1. Create a window handling test case
+    > amazon_toc_steps.py
+2. Make a test case using a loop
+    > amazon_bestsellers.feature
+      Scenario: Verify all Best Sellers links open correct target pages
+
+
+----------
 Homework#5 - Oct 2, 2021
 
 0. Code Repeated, Selenium's Waits & Exceptions -- Read
@@ -11,6 +21,7 @@ Homework#5 - Oct 2, 2021
     > codewar_overtheroad.py
 5. Solve Amazon Interview Question
     > firstnonunique.py
+
 
 ----------
 Homework#4 - Sep 28, 2021
@@ -27,7 +38,6 @@ Homework#4 - Sep 28, 2021
     > codewar_homework4.py
 
 ----------
-
 Homework#3 - Sep 25, 2021
 
 0. Repeat everything
