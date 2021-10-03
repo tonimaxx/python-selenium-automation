@@ -1,3 +1,18 @@
+Homework#5 - Oct 2, 2021
+
+0. Code Repeated, Selenium's Waits & Exceptions -- Read
+1. Go over your code and remove sleep() wherever possible.
+    (All files done)
+2. Make a test case with a loop.
+    > amazon_product_options.feature (I tried with a slightly different method)
+3. Make a test case to verify that every product on the Wholefoods
+    > wholefoods_storedeals.feature
+4. Solve Kata
+    > codewar_overtheroad.py
+5. Solve Amazon Interview Question
+    > firstnonunique.py
+
+----------
 Homework#4 - Sep 28, 2021
 
 0. Repeat everything

@@ -1,4 +1,3 @@
-# Created by tonimaxx (Jarus Soontornsing) at 9/25/21
 Feature: Test Scenarios for Amazon Cart functionality
   # test case using BDD that opens amazon.com, clicks on the cart icon and verifies that Your Amazon Cart is empty.
 

@@ -1,11 +1,6 @@
-# Created by tonimaxx at 9/28/21
-Feature: # Enter feature name here
-  # Enter feature description here
+Feature: Test Scenarios for Amazon Customer Service functionality
 
-  Scenario: # Verify Customer Service’s page UI elements are present
-    #Given Open Amazon main page
-    #When Click flyout Signin button on main page
-    #And Enter Email and Click continue
+  Scenario: Verify Customer Service’s page UI elements are present
     When Open Amazon customer service page
     Then UI Element Title Text is founded
     Then UI Element Main Container is founded

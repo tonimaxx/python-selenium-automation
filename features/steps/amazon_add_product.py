@@ -1,7 +1,8 @@
 from selenium.webdriver.common.by import By
-from behave import given, when, then
-from time import sleep
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
+from behave import given, when, then
 
 '''
 ------------
@@ -29,9 +30,10 @@ ADD_TO_CART_BUTTON = (By.XPATH, "//input[@id='add-to-cart-button']")
 
 @when('Click flyout Signin button on main page')
 def click_flyout_signin_button(context):
-    ##//a[@data-nav-ref='nav_custrec_signin']
     context.driver.find_element(*FLYOUT_SIGNIN_BUTTON).click()
-    sleep(4)
+    element = WebDriverWait(context.driver, 10).until(
+        EC.presence_of_element_located((By.XPATH, "//input[@type='email']"))
+    )
 
 @when('Enter Email and Click continue')
 def enter_email_and_click_continue(context):
@@ -41,21 +43,28 @@ def enter_email_and_click_continue(context):
     search.clear()
     search.send_keys(amazon_useremail)
     search.send_keys(Keys.RETURN)
-    sleep(4)
+    element = WebDriverWait(context.driver, 10).until(
+        EC.presence_of_element_located((By.XPATH, "//input[@type='password']"))
+    )
 
     #Fill Password and Submit
     search = context.driver.find_element(By.XPATH, "//input[@type='password']")
     search.clear()
     search.send_keys(amazon_userpassword)
     search.send_keys(Keys.RETURN)
-    sleep(4)
+
 
 @when('Search and add a product')
 def search_and_add_product(context):
+    element = WebDriverWait(context.driver, 10).until(
+        EC.title_contains("Amazon.com")
+    )
 
     # Search a product by URL
     context.driver.get("https://www.amazon.com/s?k="+product_to_search)
-    sleep(4)
+    element = WebDriverWait(context.driver, 10).until(
+        EC.element_to_be_clickable(FIRST_PRODUCT)
+    )
 
     '''
     #Search a product by find_element
@@ -67,7 +76,9 @@ def search_and_add_product(context):
 
     #Click the first product from result
     context.driver.find_element(*FIRST_PRODUCT).click()
-    sleep(4)
+    element = WebDriverWait(context.driver, 10).until(
+        EC.element_to_be_clickable(ADD_TO_CART_BUTTON)
+    )
 
     """
     # Todo - Save product title to be expected in the cart for verification
@@ -78,12 +89,16 @@ def search_and_add_product(context):
 
     # Click Add to cart button
     context.driver.find_element(*ADD_TO_CART_BUTTON).click()
-    sleep(4)
+
 
 @then('Cart is not empty')
 def verify_if_cart_is_not_empty(context):
 
     # This is just to verify if user can add a product to cart and it's expected to be there
+
+    element = WebDriverWait(context.driver, 10).until(
+        EC.title_contains("Amazon.com")
+    )
 
     not_expect_text = "Your Amazon Cart is empty"
     target_xpath = "//h2[contains(text(), '"+not_expect_text+"')]"
