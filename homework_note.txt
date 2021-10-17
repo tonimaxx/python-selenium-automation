@@ -1,3 +1,15 @@
+Homework#7 - Oct 16, 2021
+
+1.Rewrite these scenarios with Page Object pattern
+    > amazon_signin_and_cart.feature
+2.Rewrite “Add a product to cart” scenario using Page Object pattern.
+    > amazon_add_product.feature
+
+- All new files in /pages, /app
+
+https://github.com/tonimaxx/python-selenium-automation/commit/5e146e7f18bf2a121cacaff2d6af1e78c9891ade
+
+----------
 Homework#6 - Oct 3, 2021
 
 1. Create a window handling test case
