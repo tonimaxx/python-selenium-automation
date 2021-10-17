@@ -12,7 +12,7 @@ BEST_SELLERS_PAGE_TITLE = (By.XPATH, "//span[@id='zg_banner_text']")
 
 check_link_text = ''
 
-@Given('Open Amazon best sellers page')
+@given('Open Amazon best sellers page')
 def open_amazon_best_sellers(context):
     context.driver.get(target_url)
     context.driver.refresh()

@@ -35,9 +35,8 @@ def verify_found_results_text(context, search_word):
 
 ORDERS_LINK = (By.ID, "nav-orders")
 
-@given('Open Amazon page')
-def open_amazon(context):
-    context.driver.get('https://www.amazon.com/')
+
+
 
 @when('Click on Orders')
 def click_orders(context):
