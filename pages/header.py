@@ -3,6 +3,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.support.select import Select
 
 class Header(Page):
 
@@ -12,6 +14,10 @@ class Header(Page):
     product_to_search = "halloween tech shirt"
 
     #Locators
+    SEARCH_DEPARTMENT = (By.ID, 'searchDropdownBox')
+    SEARCH_DEPARTMENT_XPATH = "//select[@id='searchDropdownBox']"
+    NEW_ARRIVAL = (By.XPATH, "//span[contains(.,'New Arrivals')]")
+    NEW_ARRIVAL_CLASS = (By.CLASS_NAME, "nav-a-content")
     SEARCH_FIELD = (By.ID, 'twotabsearchtextbox')
     SEARCH_ICON = (By.ID, 'nav-search-submit-button')
     CART_ICON = (By.ID, "nav-cart")
@@ -24,6 +30,19 @@ class Header(Page):
     INPUT_SIGNIN_PASSWORD_XPATH = (By.XPATH, INPUT_SIGNIN_PASSWORD_XPATH_STR)
     FIRST_PRODUCT = (By.XPATH, "//div[@class='sg-col-inner']//span[@data-component-id='1']//a")
     ADD_TO_CART_BUTTON = (By.XPATH, "//input[@id='add-to-cart-button']")
+
+    def select_department(self, department):
+        # identify dropdown with Select class
+        sel = Select(self.driver.find_element_by_xpath(self.SEARCH_DEPARTMENT_XPATH))
+        # select by select_by_visible_text() method
+        sel.select_by_visible_text(department)
+
+    def execute_search(self, keyword):
+        search = self.driver.find_element(*self.SEARCH_FIELD)
+        search.clear()
+        search.send_keys(keyword)
+        search.send_keys(Keys.RETURN)
+
 
     def input_search(self):
         #Todo -- future use

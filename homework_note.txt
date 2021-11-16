@@ -1,3 +1,12 @@
+Homework#8
+
+1. Make another test scenario using a dropdown and search for an item in a different Amazon department.
+    > amazon_search_department.feature
+2. Make a test case that:
+Opens https://www.amazon.com/gp/product/B074TBCSC8 (or any other product from the closing category), hovers over New Arrivals, then verifies that the user sees the deals.
+    > amazon_new_arrivals.feature
+
+----------
 Homework#7 - Oct 16, 2021
 
 1.Rewrite these scenarios with Page Object pattern

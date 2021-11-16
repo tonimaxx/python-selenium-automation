@@ -2,6 +2,7 @@ from pages.main_page import MainPage
 from pages.header import Header
 from pages.signin_page import SigninPage
 from pages.shopping_cart import CartPage
+from pages.product_page import ProductPage
 
 class Application:
 
@@ -11,3 +12,4 @@ class Application:
             self.header = Header(self.driver)
             self.signin_page = SigninPage(self.driver)
             self.cart_page = CartPage(self.driver)
+            self.product_page = ProductPage(self.driver)
